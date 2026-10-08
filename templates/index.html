@@ -1,10 +1,9 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Fertilizer Recommendation System</title>
 
     <link rel="stylesheet"
@@ -28,6 +27,7 @@
 
             <div class="form-grid">
 
+                <!-- Soil Type -->
                 <div class="input-group">
                     <label>Soil Type</label>
                     <select name="Soil_Type" required>
@@ -39,66 +39,97 @@
                     </select>
                 </div>
 
+                <!-- Soil pH -->
                 <div class="input-group">
                     <label>Soil pH</label>
-                    <input type="number" step="0.01"
-                           name="Soil_pH" required>
+                    <input type="number"
+                           step="0.01"
+                           name="Soil_pH"
+                           required>
                 </div>
 
+                <!-- Soil Moisture -->
                 <div class="input-group">
-                    <label>Soil Moisture</label>
-                    <input type="number" step="0.01"
-                           name="Soil_Moisture" required>
+                    <label>Soil Moisture (%)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Soil_Moisture"
+                           required>
                 </div>
 
+                <!-- Organic Carbon -->
                 <div class="input-group">
-                    <label>Organic Carbon</label>
-                    <input type="number" step="0.01"
-                           name="Organic_Carbon" required>
+                    <label>Organic Carbon (%)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Organic_Carbon"
+                           required>
                 </div>
 
+                <!-- Electrical Conductivity -->
                 <div class="input-group">
-                    <label>Electrical Conductivity</label>
-                    <input type="number" step="0.01"
-                           name="Electrical_Conductivity" required>
+                    <label>Electrical Conductivity (dS/m)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Electrical_Conductivity"
+                           required>
                 </div>
 
+                <!-- Nitrogen -->
                 <div class="input-group">
-                    <label>Nitrogen Level</label>
-                    <input type="number" step="0.01"
-                           name="Nitrogen_Level" required>
+                    <label>Nitrogen Level (mg/kg)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Nitrogen_Level"
+                           required>
                 </div>
 
+                <!-- Phosphorus -->
                 <div class="input-group">
-                    <label>Phosphorus Level</label>
-                    <input type="number" step="0.01"
-                           name="Phosphorus_Level" required>
+                    <label>Phosphorus Level (mg/kg)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Phosphorus_Level"
+                           required>
                 </div>
 
+                <!-- Potassium -->
                 <div class="input-group">
-                    <label>Potassium Level</label>
-                    <input type="number" step="0.01"
-                           name="Potassium_Level" required>
+                    <label>Potassium Level (mg/kg)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Potassium_Level"
+                           required>
                 </div>
 
+                <!-- Temperature -->
                 <div class="input-group">
-                    <label>Temperature</label>
-                    <input type="number" step="0.01"
-                           name="Temperature" required>
+                    <label>Temperature (°C)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Temperature"
+                           required>
                 </div>
 
+                <!-- Humidity -->
                 <div class="input-group">
-                    <label>Humidity</label>
-                    <input type="number" step="0.01"
-                           name="Humidity" required>
+                    <label>Humidity (%)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Humidity"
+                           required>
                 </div>
 
+                <!-- Rainfall -->
                 <div class="input-group">
-                    <label>Rainfall</label>
-                    <input type="number" step="0.01"
-                           name="Rainfall" required>
+                    <label>Rainfall (mm)</label>
+                    <input type="number"
+                           step="0.01"
+                           name="Rainfall"
+                           required>
                 </div>
 
+                <!-- Crop Type -->
                 <div class="input-group">
                     <label>Crop Type</label>
                     <select name="Crop_Type" required>
@@ -113,6 +144,7 @@
                     </select>
                 </div>
 
+                <!-- Crop Growth Stage -->
                 <div class="input-group">
                     <label>Crop Growth Stage</label>
                     <select name="Crop_Growth_Stage" required>
@@ -124,6 +156,7 @@
                     </select>
                 </div>
 
+                <!-- Season -->
                 <div class="input-group">
                     <label>Season</label>
                     <select name="Season" required>
@@ -142,21 +175,31 @@
         </form>
 
         {% if prediction %}
+
         <div class="result">
+
             <h2>Recommended Fertilizer</h2>
+
             <div class="fertilizer">
                 {{ prediction }}
             </div>
+
         </div>
+
         {% endif %}
 
     </div>
 
     <div class="footer">
-        <p>Powered by Machine Learning • Decision Tree Accuracy: 87.40%</p>
+        <p>
+            Powered by Machine Learning •
+            Decision Tree Accuracy: 87.40%
+        </p>
     </div>
 
 </div>
 
 </body>
 </html>
+```
+
