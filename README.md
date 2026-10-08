@@ -97,6 +97,10 @@ The trained machine learning model processes the input and displays the recommen
 ## 🚀 Deployment
 
 The Flask application is deployed using Render.
+
+### 🌐 Live Demo
+
+[Click here to use the Fertilizer Recommendation System](https://fertilizer-recommendation-system-0shw.onrender.com)
 ## 📁 Project Structure
 
 ```text
