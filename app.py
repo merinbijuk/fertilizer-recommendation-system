@@ -1,5 +1,6 @@
 
-from flask import Flask, render_template, request
+```python
+from flask import Flask, render_template, request, send_from_directory
 import joblib
 import pandas as pd
 import os
@@ -18,6 +19,12 @@ model = joblib.load(model_path)
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+# Serve the PWA manifest
+@app.route('/manifest.json')
+def manifest():
+    return send_from_directory('static', 'manifest.json')
 
 
 @app.route('/predict', methods=['POST'])
@@ -52,3 +59,4 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+```
