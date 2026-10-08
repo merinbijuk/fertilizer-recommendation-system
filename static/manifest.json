@@ -1,3 +1,4 @@
+```json
 {
   "name": "Fertilizer Recommendation System",
   "short_name": "Fertilizer App",
@@ -5,5 +6,13 @@
   "display": "standalone",
   "background_color": "#eef7f0",
   "theme_color": "#3f8f5b",
-  "description": "Machine learning based fertilizer recommendation system."
+  "description": "Machine learning based fertilizer recommendation system.",
+  "icons": [
+    {
+      "src": "/static/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
 }
+```
