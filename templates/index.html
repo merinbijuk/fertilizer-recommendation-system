@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fertilizer Recommendation System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🌱 Fertilizer Recommendation System</h1>
+        <p>Machine Learning Based Smart Fertilizer Recommendation</p>
+    </div>
+
+    <div class="card">
+
+        <h2>Enter Soil & Crop Details</h2>
+
+        <form action="/predict" method="POST">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Soil Type</label>
+                    <select name="Soil_Type" required>
+                        <option value="">Select Soil Type</option>
+                        <option>Clay</option>
+                        <option>Loamy</option>
+                        <option>Sandy</option>
+                        <option>Silt</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Soil pH</label>
+                    <input type="number" step="0.01"
+                           name="Soil_pH" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Soil Moisture</label>
+                    <input type="number" step="0.01"
+                           name="Soil_Moisture" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Organic Carbon</label>
+                    <input type="number" step="0.01"
+                           name="Organic_Carbon" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Electrical Conductivity</label>
+                    <input type="number" step="0.01"
+                           name="Electrical_Conductivity" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Nitrogen Level</label>
+                    <input type="number" step="0.01"
+                           name="Nitrogen_Level" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phosphorus Level</label>
+                    <input type="number" step="0.01"
+                           name="Phosphorus_Level" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Potassium Level</label>
+                    <input type="number" step="0.01"
+                           name="Potassium_Level" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Temperature</label>
+                    <input type="number" step="0.01"
+                           name="Temperature" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Humidity</label>
+                    <input type="number" step="0.01"
+                           name="Humidity" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Rainfall</label>
+                    <input type="number" step="0.01"
+                           name="Rainfall" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Crop Type</label>
+                    <select name="Crop_Type" required>
+                        <option value="">Select Crop</option>
+                        <option>Cotton</option>
+                        <option>Maize</option>
+                        <option>Potato</option>
+                        <option>Rice</option>
+                        <option>Sugarcane</option>
+                        <option>Tomato</option>
+                        <option>Wheat</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Crop Growth Stage</label>
+                    <select name="Crop_Growth_Stage" required>
+                        <option value="">Select Growth Stage</option>
+                        <option>Flowering</option>
+                        <option>Harvest</option>
+                        <option>Sowing</option>
+                        <option>Vegetative</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Season</label>
+                    <select name="Season" required>
+                        <option value="">Select Season</option>
+                        <option>Kharif</option>
+                        <option>Zaid</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button type="submit">
+                🔍 Recommend Fertilizer
+            </button>
+
+        </form>
+
+        {% if prediction %}
+        <div class="result">
+            <h2>Recommended Fertilizer</h2>
+            <div class="fertilizer">
+                {{ prediction }}
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <div class="footer">
+        <p>Powered by Machine Learning • Decision Tree Accuracy: 87.40%</p>
+    </div>
+
+</div>
+
+</body>
+</html>
