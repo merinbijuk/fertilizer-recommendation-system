@@ -1,0 +1,9 @@
+{
+  "name": "Fertilizer Recommendation System",
+  "short_name": "Fertilizer App",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef7f0",
+  "theme_color": "#3f8f5b",
+  "description": "Machine learning based fertilizer recommendation system."
+}
