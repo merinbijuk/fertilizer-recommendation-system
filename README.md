@@ -76,19 +76,18 @@ The **Decision Tree Classifier** was selected as the final model because it achi
 
 ## ⚙️ System Workflow
 
-```text
 User Input
     ↓
 Flask Web Application
     ↓
-Data Preprocessing
+Trained Preprocessing Pipeline
     ↓
-Trained Decision Tree Model
+Decision Tree Model
     ↓
 Fertilizer Prediction
     ↓
 Recommended Fertilizer
-## 🌐 Web Application
+
 
 The application provides an interactive form where users can enter soil, crop, and environmental information.
 
